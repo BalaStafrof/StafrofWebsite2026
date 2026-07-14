@@ -1,1 +1,1 @@
-output_location: ".output/public"
+output_location: "dist"
