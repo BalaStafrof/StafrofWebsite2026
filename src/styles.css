@@ -1,5 +1,6 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
-@import url("https://use.typekit.net/mkv0nuz.css");
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');[...]
+/* Commented out remote Typekit import to avoid lightningcss build error in CI */
+/* @import url("https://use.typekit.net/mkv0nuz.css"); */
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -208,7 +209,6 @@
     linear-gradient(180deg, oklch(0.99 0 0) 0%, oklch(0.97 0.003 260) 100%);
 }
 
-/* Cinematic full-bleed hero — used on every section landing */
 @utility hero-cosmic {
   position: relative;
   background-color: var(--color-cosmic);
@@ -239,7 +239,6 @@
   pointer-events: none;
 }
 
-/* Twinkling stars + drifting nebula particles (CSS-only) */
 @utility cosmic-particles {
   position: absolute;
   inset: 0;
@@ -346,7 +345,6 @@
   }
 }
 
-/* Premium sliding card animation inspired by Orion Innovation */
 @utility card-slide-hover {
   position: relative;
   overflow: hidden;
@@ -385,7 +383,6 @@
   }
 }
 
-/* Glowing button used on dark surfaces */
 @utility btn-glow {
   position: relative;
   display: inline-flex;
@@ -436,8 +433,6 @@
   }
 }
 
-/* Reveal-on-scroll: opacity 0 -> 1 + slight lift. Activated by IntersectionObserver
-   adding the `is-visible` class. */
 @utility reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -464,7 +459,6 @@
   transform: translate(0);
 }
 
-/* Underline grow for text links */
 @utility link-underline {
   position: relative;
   display: inline-flex;
@@ -490,7 +484,6 @@
   }
 }
 
-/* Image-led tile media: Ken-Burns zoom + brand gradient veil on hover */
 @utility tile-media {
   position: relative;
   overflow: hidden;
@@ -518,7 +511,6 @@
   }
 }
 
-/* Spotlight that follows hover (pure CSS via radial gradient) */
 @utility card-spotlight {
   position: relative;
   isolation: isolate;
@@ -536,7 +528,6 @@
   &:hover::before { opacity: 1; }
 }
 
-/* Floating orbs decoration used inside cosmic heroes */
 @utility cosmic-orb {
   position: absolute;
   border-radius: 9999px;
@@ -546,7 +537,6 @@
   animation: float 9s ease-in-out infinite;
 }
 
-/* Marquee row for trust/coverage strips */
 @utility marquee-track {
   display: flex;
   gap: 3rem;
@@ -559,9 +549,6 @@
   to { transform: translateX(-50%); }
 }
 
-/* Reduced-motion: respect OS preference or user toggle.
-   Disables animations, transitions, and scroll-triggered reveals so the
-   site stays readable and performant without motion. */
 @media (prefers-reduced-motion: reduce) {
   html:not(.motion-ok) *,
   html:not(.motion-ok) *::before,
@@ -591,7 +578,6 @@ html.reduce-motion .reveal {
 }
 
 
-/* Animated background waves and glow effects for platforms section */
 @keyframes wave-bg {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -639,7 +625,6 @@ html.reduce-motion .reveal {
   animation: ken-burns 6s ease-out forwards;
 }
 
-/* Premium FinTech Visual Styles */
 @utility premium-card {
   position: relative;
   background: rgba(255, 255, 255, 0.45);
@@ -706,6 +691,7 @@ header { background: var(--brand-dark-blue); padding: 0 5%; }
 .sub-main-menu a:hover { background: var(--brand-dark-blue); color: var(--main-menu-color); }
 .hero-cosmic-content { margin-left: 2%; margin-top: 20%; }
 .max-w-7xl { max-width: 90%; }
+
 
 
 
