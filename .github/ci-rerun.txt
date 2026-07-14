@@ -1,0 +1,3 @@
+Triggering CI rerun: create a tiny file to trigger GitHub Actions run.
+
+This commit was created by GitHub Copilot assistant on user request to re-run the CI after fixing styles.css.
